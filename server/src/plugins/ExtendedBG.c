@@ -2790,7 +2790,7 @@ void area_flooritem(int16 m, int16 x, int16 y, int itemid, int amount)
 
 	range = (int)sqrt(amount) + rnd()%2;
 	for (i = 0; i < amount; i++) {
-		map->search_freecell(NULL, m, &x, &y, range, range, 1);
+		map->search_free_cell(NULL, m, &x, &y, range, range, 1);
 		map->addflooritem(NULL, &item_tmp, 1, m, x, y, 0, 0, 0, 0, false); //ToDo: Greed Check
 	}
 }
